@@ -46,12 +46,6 @@ class MeanFieldParams:
         return self.dist().log_prob(value).sum()
 
 
-# def get_learning_rate(i, s, grad, tau=1, alpha=0.1):
-#     s = alpha * grad**2 + (1 - alpha) * s
-#     rho = learning_rate * (i ** (-0.5 + 1e-16)) / (tau + np.sqrt(s))
-#     return rho, s
-
-
 def train_advi(
     x_train,
     y_train,
@@ -105,7 +99,6 @@ def train_advi(
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            # scheduler.step(logpred)
 
             # Print progress bar
             print(

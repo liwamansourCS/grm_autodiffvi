@@ -48,7 +48,7 @@ def elbo(y_train, x_train, y_val, x_val, model_params, full_data_size, advi_mode
     elif advi_mode == "fullrank":
         beta = sample["params"]
 
-    out = loglike(y_train, x_train, beta, full_data_size)
+    out += loglike(y_train, x_train, beta, full_data_size)
     out += log_prior_plus_logabsdet_J(beta)
 
     logpred = compute_avg_precision(x_val, y_val, model_params, advi_mode)
