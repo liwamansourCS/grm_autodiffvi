@@ -1,1 +1,1 @@
-Code for the project of the course: Graphical Models: Discrete Inference and Learning.
+Code for the project of the course: <b> Graphical Models: Discrete Inference and Learning. </b> 
