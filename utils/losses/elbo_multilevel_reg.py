@@ -77,7 +77,7 @@ def log_q(model_params, params):
 
 
 def elbo(y_train, x_train, y_val, x_val, model_params, full_data_size, advi_mode):
-    n_samples = 10
+    n_samples = 1
     samples = [{key: model_params[key].rsample() for key in model_params.keys()} for _ in range(n_samples)]
     
     loss = 0
